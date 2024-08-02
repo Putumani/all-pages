@@ -41,7 +41,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 18.2px;
-    color: #000000;
+    color: #1F2128;
 }
 
 .clickable-component-container {
@@ -75,7 +75,7 @@ body {
 
 .line {
     width: 340px;
-    height: 1px;
+    height: 0.7px;
     background: #CDCDCD;
     margin: 0;
 }
