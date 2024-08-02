@@ -17,15 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
             c.style.backgroundColor = "#FFFFFF";
             c.style.border = "1px solid #CDCDCD";
             c.style.opacity = "0.6";
-            c.innerHTML = ""; 
+            c.innerHTML = "";
           });
         } else {
           clickableComponents.forEach((c) => {
             c.classList.add("active");
-            c.style.backgroundColor = "blue";
+            c.style.backgroundColor = "#5087F8";
             c.style.border = "none";
             c.style.opacity = "1";
-            c.innerHTML = '<span class="checkmark">&#10003;</span>'; 
+            c.innerHTML =
+              '<img src="/assets/checkmark.svg" class="checkmark" alt="Checkmark">';
           });
         }
       } else {
@@ -34,13 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
           component.style.backgroundColor = "#FFFFFF";
           component.style.border = "1px solid #CDCDCD";
           component.style.opacity = "0.6";
-          component.innerHTML = ""; 
+          component.innerHTML = "";
         } else {
           component.classList.add("active");
-          component.style.backgroundColor = "blue";
+          component.style.backgroundColor = "#5087F8";
           component.style.border = "none";
           component.style.opacity = "1";
-          component.innerHTML = '<span class="checkmark">&#10003;</span>'; 
+          component.innerHTML =
+            '<img src="/assets/checkmark.svg" class="checkmark" alt="Checkmark">';
         }
       }
     });
