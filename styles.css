@@ -109,3 +109,8 @@ body {
     font-weight: 400;
     cursor: pointer;
 }
+
+.checkmark {
+    color: #FFFFFF;
+    font-size: 18px;
+}
