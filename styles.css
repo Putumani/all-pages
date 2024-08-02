@@ -54,12 +54,21 @@ body {
     opacity: 0.6;
 }
 
+.line-container {
+    width: 370px;
+    height: 20px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
 .line {
     width: 340px;
-    height: 0px;
-    border: 0.7px solid #CDCDCD;
-    opacity: 1;
-    margin: 0 auto 5px;
+    height: 1px;
+    background: #CDCDCD;
+    margin: 0;
 }
 
 .pages-bundle {
