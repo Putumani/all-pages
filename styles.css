@@ -22,18 +22,21 @@ body {
     margin: 0;
 }
 
-.all-pages {
-    width: 100%;
+.all-pages,
+.page {
+    width: 370px;
     height: 42px;
-    padding: 8px 15px;
+    padding: 8px 15px 8px 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #FFFFFF;
     box-sizing: border-box;
+    margin-bottom: 5px;
 }
 
-.all-pages-text {
+.all-pages-text,
+.page-text {
     font-size: 14px;
     font-weight: 400;
     line-height: 18.2px;
@@ -47,4 +50,19 @@ body {
     border: 1px solid #CDCDCD;
     background-color: #FFFFFF;
     opacity: 0.6;
+}
+
+.line {
+    width: 340px;
+    height: 0px;
+    border: 0.7px solid #CDCDCD;
+    opacity: 1;
+    margin: 0 auto 5px;
+}
+
+.pages-bundle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
 }
