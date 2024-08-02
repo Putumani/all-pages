@@ -4,6 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
     ".all-pages .clickable-component"
   );
 
+  const checkmarkSVG = `
+    <svg width="23px" height="23px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" stroke="#FFFFFF">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <polyline points="416 128 192 384 96 288" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></polyline>
+      </g>
+    </svg>`;
+
   clickableComponents.forEach((component) => {
     component.addEventListener("click", () => {
       if (component === allPagesClickableComponent) {
@@ -25,8 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             c.style.backgroundColor = "#5087F8";
             c.style.border = "none";
             c.style.opacity = "1";
-            c.innerHTML =
-              '<img src="/assets/checkmark.svg" class="checkmark" alt="Checkmark">';
+            c.innerHTML = checkmarkSVG;
           });
         }
       } else {
@@ -41,8 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
           component.style.backgroundColor = "#5087F8";
           component.style.border = "none";
           component.style.opacity = "1";
-          component.innerHTML =
-            '<img src="/assets/checkmark.svg" class="checkmark" alt="Checkmark">';
+          component.innerHTML = checkmarkSVG;
         }
       }
     });
