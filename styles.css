@@ -116,4 +116,13 @@ body {
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #FFD84D;
+}
+
+.custom-button:active {
+    background-color: #FFD84D;
 }
