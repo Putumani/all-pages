@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const clickableComponents = document.querySelectorAll(".clickable-component");
+  const allPagesComponent = document.getElementById("all-pages-component");
 
   clickableComponents.forEach((component) => {
     component.addEventListener("mouseenter", function () {
@@ -30,10 +31,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     component.addEventListener("click", function () {
-      component.classList.add("variant4");
-      component.classList.remove("variant2");
-      component.classList.remove("variant1");
-      document.addEventListener("mousemove", handleMouseMoveOutside);
+      if (component === allPagesComponent) {
+        document.querySelector(".card").classList.add("all-pages-clicked");
+        clickableComponents.forEach((comp) => {
+          comp.classList.add("variant4");
+          comp.classList.remove("variant2");
+          comp.classList.remove("variant1");
+        });
+        document.addEventListener("mousemove", handleMouseMoveOutside);
+      } else {
+        component.classList.add("variant4");
+        component.classList.remove("variant2");
+        component.classList.remove("variant1");
+        document.addEventListener("mousemove", handleMouseMoveOutside);
+      }
     });
   });
 
