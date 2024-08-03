@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       clickableComponents.forEach((comp) => {
         comp.classList.remove("variant4");
+        comp.classList.remove("variant5");
         comp.classList.add("variant1");
       });
       allPagesComponent.classList.remove("variant4");
@@ -22,14 +23,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   clickableComponents.forEach((component) => {
     component.addEventListener("mouseenter", function () {
-      if (!component.classList.contains("variant4")) {
+      if (component.classList.contains("variant5")) {
+        component.classList.add("variant4");
+        component.classList.remove("variant5");
+      } else if (!component.classList.contains("variant4")) {
         component.classList.add("variant2");
         component.classList.remove("variant1");
       }
     });
 
     component.addEventListener("mouseleave", function () {
-      if (!component.classList.contains("variant4")) {
+      if (component.classList.contains("variant4")) {
+        component.classList.add("variant5");
+        component.classList.remove("variant4");
+      } else {
         component.classList.remove("variant2");
         component.classList.add("variant1");
         component.classList.remove("variant3");
@@ -51,10 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
     component.addEventListener("click", function () {
       if (component.classList.contains("variant4")) {
         component.classList.remove("variant4");
+        component.classList.remove("variant5");
         component.classList.add("variant1");
       } else {
         component.classList.add("variant4");
         component.classList.remove("variant1");
+        component.classList.remove("variant5");
       }
     });
   });
