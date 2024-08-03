@@ -76,9 +76,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     component.addEventListener("click", function () {
       if (component.classList.contains("variant4")) {
+        component.classList.add("variant5-transition");
         component.classList.remove("variant4");
-        component.classList.remove("variant5");
-        component.classList.add("variant1");
+        setTimeout(() => {
+          component.classList.remove("variant5-transition");
+          component.classList.add("variant2");
+        }, 50); 
       } else {
         component.classList.add("variant4");
         component.classList.remove("variant1");
@@ -100,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         comp.classList.add("variant5");
         comp.classList.remove("variant4");
       });
-      allPagesSelected = false; 
+      allPagesSelected = false;
     }
   });
 });
