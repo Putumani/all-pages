@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   allPagesComponent.addEventListener("mouseleave", function () {
     if (allPagesSelected) {
       allPagesComponent.classList.remove("variant4");
-      allPagesComponent.classList.add("variant5-transition");
+      allPagesComponent.classList.add("variant5");
       clickableComponents.forEach((comp) => {
         comp.classList.add("variant5");
         comp.classList.remove("variant4");
