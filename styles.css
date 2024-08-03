@@ -64,12 +64,14 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 20px;
-    color: #ffffff;
     display: none;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+}
+
+.checkmark polyline {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 32px;
 }
 
 .variant1 {
@@ -81,8 +83,11 @@ body {
 }
 
 .variant2 .checkmark {
-    stroke: #e3e3e3;
     display: flex;
+}
+
+.variant2 .checkmark polyline {
+    stroke: #e3e3e3;
 }
 
 .variant3 {
@@ -90,8 +95,11 @@ body {
 }
 
 .variant3 .checkmark {
-    stroke: #878787;
     display: flex;
+}
+
+.variant3 .checkmark polyline {
+    stroke: #878787;
 }
 
 .variant4 {
@@ -100,9 +108,11 @@ body {
 }
 
 .variant4 .checkmark {
-    fill: #ffffff;
-    stroke: #ffffff;
     display: flex;
+}
+
+.variant4 .checkmark polyline {
+    stroke: #ffffff;
 }
 
 .variant5 {
@@ -111,9 +121,11 @@ body {
 }
 
 .variant5 .checkmark {
-    fill: #ffffff;
-    stroke: #ffffff;
     display: flex;
+}
+
+.variant5 .checkmark polyline {
+    stroke: #ffffff;
 }
 
 .clickable-component.variant5-transition {
@@ -122,7 +134,7 @@ body {
 }
 
 .all-pages-clicked .clickable-component {
-    opacity: 1;
+    opacity: 0;
 }
 
 .line-container {

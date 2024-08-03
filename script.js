@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const clickableComponents = document.querySelectorAll(".clickable-component");
   const allPagesComponent = document.getElementById("all-pages-component");
+  const allPagesClickableComponent = allPagesComponent.querySelector(
+    ".clickable-component"
+  );
   let allPagesSelected = false;
 
   function updateComponentState() {
@@ -10,16 +13,16 @@ document.addEventListener("DOMContentLoaded", function () {
         comp.classList.remove("variant2");
         comp.classList.remove("variant1");
       });
-      allPagesComponent.classList.add("variant4");
-      allPagesComponent.classList.remove("variant5");
+      allPagesClickableComponent.classList.add("variant4");
+      allPagesClickableComponent.classList.remove("variant5");
     } else {
       clickableComponents.forEach((comp) => {
         comp.classList.remove("variant4");
         comp.classList.remove("variant5");
         comp.classList.add("variant1");
       });
-      allPagesComponent.classList.remove("variant4");
-      allPagesComponent.classList.remove("variant5");
+      allPagesClickableComponent.classList.remove("variant4");
+      allPagesClickableComponent.classList.remove("variant5");
     }
   }
 
@@ -90,15 +93,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  allPagesComponent.addEventListener("click", function () {
+  allPagesClickableComponent.addEventListener("click", function () {
     allPagesSelected = !allPagesSelected;
     updateComponentState();
   });
 
   allPagesComponent.addEventListener("mouseleave", function () {
     if (allPagesSelected) {
-      allPagesComponent.classList.add("variant5");
-      allPagesComponent.classList.remove("variant4");
+      allPagesClickableComponent.classList.add("variant5");
+      allPagesClickableComponent.classList.remove("variant4");
       clickableComponents.forEach((comp) => {
         comp.classList.add("variant5");
         comp.classList.remove("variant4");
