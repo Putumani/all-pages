@@ -6,11 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateComponentState() {
     if (allPagesSelected) {
       clickableComponents.forEach((comp) => {
-        comp.classList.add("variant4");
+        comp.classList.add("variant5");
         comp.classList.remove("variant2");
         comp.classList.remove("variant1");
       });
       allPagesComponent.classList.add("variant4");
+      allPagesComponent.classList.remove("variant5");
     } else {
       clickableComponents.forEach((comp) => {
         comp.classList.remove("variant4");
@@ -18,28 +19,46 @@ document.addEventListener("DOMContentLoaded", function () {
         comp.classList.add("variant1");
       });
       allPagesComponent.classList.remove("variant4");
+      allPagesComponent.classList.remove("variant5");
     }
   }
 
   clickableComponents.forEach((component) => {
     component.addEventListener("mouseenter", function () {
-      if (component.classList.contains("variant5")) {
-        component.classList.add("variant4");
-        component.classList.remove("variant5");
-      } else if (!component.classList.contains("variant4")) {
-        component.classList.add("variant2");
-        component.classList.remove("variant1");
+      if (allPagesSelected) {
+        if (component.classList.contains("variant5")) {
+          component.classList.add("variant5");
+          component.classList.remove("variant4");
+        } else {
+          component.classList.add("variant5");
+          component.classList.remove("variant1");
+        }
+      } else {
+        if (component.classList.contains("variant5")) {
+          component.classList.add("variant4");
+          component.classList.remove("variant5");
+        } else if (!component.classList.contains("variant4")) {
+          component.classList.add("variant2");
+          component.classList.remove("variant1");
+        }
       }
     });
 
     component.addEventListener("mouseleave", function () {
-      if (component.classList.contains("variant4")) {
-        component.classList.add("variant5");
-        component.classList.remove("variant4");
+      if (allPagesSelected) {
+        if (component.classList.contains("variant5")) {
+          component.classList.add("variant5");
+          component.classList.remove("variant4");
+        }
       } else {
-        component.classList.remove("variant2");
-        component.classList.add("variant1");
-        component.classList.remove("variant3");
+        if (component.classList.contains("variant4")) {
+          component.classList.add("variant5");
+          component.classList.remove("variant4");
+        } else {
+          component.classList.remove("variant2");
+          component.classList.add("variant1");
+          component.classList.remove("variant3");
+        }
       }
     });
 
@@ -71,5 +90,17 @@ document.addEventListener("DOMContentLoaded", function () {
   allPagesComponent.addEventListener("click", function () {
     allPagesSelected = !allPagesSelected;
     updateComponentState();
+  });
+
+  allPagesComponent.addEventListener("mouseleave", function () {
+    if (allPagesSelected) {
+      allPagesComponent.classList.add("variant5");
+      allPagesComponent.classList.remove("variant4");
+      clickableComponents.forEach((comp) => {
+        comp.classList.add("variant5");
+        comp.classList.remove("variant4");
+      });
+      allPagesSelected = false; 
+    }
   });
 });
