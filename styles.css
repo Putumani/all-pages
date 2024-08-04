@@ -56,6 +56,7 @@ body {
   background-color: #ffffff;
   opacity: 0.6;
   position: relative;
+  transition: background-color 0.1s, border 0.1s;
 }
 
 .checkmark {
@@ -105,6 +106,7 @@ body {
 .variant4 {
   background-color: #5087f8;
   border: none;
+  transition: background-color 0.1s;
 }
 
 .variant4 .checkmark {
@@ -118,11 +120,7 @@ body {
 .variant5 {
   background-color: #2469f6;
   border: none;
-}
-
-.variant5-transition {
-  border: 3px solid #2469f6;
-  background-color: #2469f6;
+  transition: background-color 0.1s;
 }
 
 .variant5 .checkmark {
@@ -133,9 +131,10 @@ body {
   stroke: #ffffff;
 }
 
-.clickable-component.variant5-transition {
+.variant5-transition {
   border: 3px solid #2469f6;
-  transition: border 0.3s ease;
+  background-color: #2469f6;
+  transition: 0.1s;
 }
 
 .all-pages-clicked .clickable-component {

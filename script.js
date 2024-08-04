@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } else {
       if (component.classList.contains("variant4")) {
-        applyVariants(component, ["variant5"], ["variant4"]);
+        applyVariants(component, ["variant5"], ["variant4"]); 
       } else {
         applyVariants(component, ["variant1"], ["variant2"]);
       }
@@ -43,10 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleClick(component) {
     if (component.classList.contains("variant4")) {
-      applyVariants(component, ["variant5-transition"], ["variant4"]);
+      applyVariants(component, ["variant5"], ["variant4"]);
+
       setTimeout(() => {
-        applyVariants(component, ["variant2"], ["variant5-transition"]);
-      }, 50);
+        applyVariants(component, ["variant2"], ["variant5"]);
+      }, 0); 
     } else {
       applyVariants(component, ["variant4"], ["variant1", "variant5"]);
     }
