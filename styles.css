@@ -1,189 +1,193 @@
 body {
-  font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .card {
-  width: 370px;
-  height: 326px;
-  top: 85px;
-  left: 104px;
-  padding: 10px 0;
-  gap: 0;
-  border-radius: 6px;
-  border: 1px solid #eeeeee;
-  position: absolute;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 8px 15px 0px #1414141f, 0px 0px 4px 0px #1414141a;
+    width: 370px;
+    height: 326px;
+    top: 85px;
+    left: 104px;
+    padding: 10px 0;
+    gap: 0;
+    border-radius: 6px;
+    border: 1px solid #eeeeee;
+    position: absolute;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 8px 15px 0px #1414141f, 0px 0px 4px 0px #1414141a;
 }
 
 .all-pages,
 .page {
-  width: 370px;
-  height: 42px;
-  padding: 8px 15px 8px 22px;
-  gap: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  box-sizing: border-box;
+    width: 370px;
+    height: 42px;
+    padding: 8px 15px 8px 22px;
+    gap: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-sizing: border-box;
 }
 
 .all-pages-text,
 .page-text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18.2px;
-  color: #1f2128;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+    color: #1f2128;
 }
 
 .clickable-component-container {
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .clickable-component {
-  width: 23px;
-  height: 23px;
-  border-radius: 6px;
-  border: 1px solid #cdcdcd;
-  background-color: #ffffff;
-  opacity: 0.6;
-  position: relative;
+    width: 23px;
+    height: 23px;
+    border-radius: 6px;
+    border: 1px solid #cdcdcd;
+    background-color: #ffffff;
+    opacity: 0.6;
+    position: relative;
 }
 
 .checkmark {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
 }
 
 .checkmark polyline {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 32px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 32px;
 }
 
 .variant1 {
-  border: 1px solid #cdcdcd;
+    border: 1px solid #cdcdcd;
 }
 
 .variant2 {
-  border: 1px solid #cdcdcd;
+    border: 1px solid #cdcdcd;
 }
 
 .variant2 .checkmark {
-  display: flex;
+    display: flex;
 }
 
 .variant2 .checkmark polyline {
-  stroke: #e3e3e3;
+    stroke: #e3e3e3;
 }
 
 .variant3 {
-  border: 3px solid #2469f6;
+    border: 3px solid #2469f6;
 }
 
 .variant3 .checkmark {
-  display: flex;
+    display: flex;
 }
 
 .variant3 .checkmark polyline {
-  stroke: #878787;
+    stroke: #878787;
 }
 
 .variant4 {
-  background-color: #5087f8;
-  border: none;
+    background-color: #5087f8;
+    border: none;
 }
 
 .variant4 .checkmark {
-  display: flex;
+    display: flex;
 }
 
 .variant4 .checkmark polyline {
-  stroke: #ffffff;
+    stroke: #ffffff;
 }
 
 .variant5 {
-  background-color: #2469f6;
-  border: none;
+    background-color: #2469f6;
+    border: none;
 }
 
 .variant5 .checkmark {
-  display: flex;
+    display: flex;
 }
 
 .variant5 .checkmark polyline {
-  stroke: #ffffff;
+    stroke: #ffffff;
 }
 
 .clickable-component.variant5-transition {
-  border: 3px solid #2469f6;
-  transition: border 0.3s ease;
+    border: 3px solid #2469f6;
+    transition: border 0.3s ease;
 }
 
 .all-pages-clicked .clickable-component {
-  opacity: 0;
+    opacity: 0;
 }
 
 .line-container {
-  width: 370px;
-  height: 20px;
-  padding: 10px 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+    width: 370px;
+    height: 20px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .line {
-  width: 340px;
-  height: 0.7px;
-  background: #cdcdcd;
-  margin: 0;
+    width: 340px;
+    height: 0.7px;
+    background: #cdcdcd;
+    margin: 0;
 }
 
 .pages-bundle {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
 }
 
 .button-container {
-  width: 370px;
-  height: 60px;
-  padding: 10px 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  box-sizing: border-box;
+    width: 370px;
+    height: 60px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
 }
 
 .custom-button {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 6px;
-  background: #ffce22;
-  font-size: 16px;
-  font-weight: 400;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 6px;
+    background: #ffce22;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0ms ease;
 }
 
 .custom-button:hover {
-  background-color: #e8b507;
+    background-color: #ffd84d;
+}
+
+.custom-button:active {
+    background-color: #ffce22;
 }
