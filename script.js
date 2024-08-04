@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (component.classList.contains("variant4")) {
         applyVariants(component, ["variant5"], ["variant4"]);
       } else {
-        applyVariants(component, ["variant1"], ["variant2", "variant3"]);
+        applyVariants(component, ["variant1"], ["variant2"]);
       }
     }
   }
@@ -46,10 +46,36 @@ document.addEventListener("DOMContentLoaded", function () {
       applyVariants(component, ["variant5-transition"], ["variant4"]);
       setTimeout(() => {
         applyVariants(component, ["variant2"], ["variant5-transition"]);
-      }, 300);
+      }, 50);
     } else {
       applyVariants(component, ["variant4"], ["variant1", "variant5"]);
     }
+  }
+
+  function setupClickEvents() {
+    clickableComponents.forEach((component) => {
+      component.addEventListener("mouseenter", () =>
+        handleMouseEnter(component)
+      );
+      component.addEventListener("mouseleave", () =>
+        handleMouseLeave(component)
+      );
+      component.addEventListener("mousedown", () => {
+        if (component.classList.contains("variant4")) {
+          applyVariants(component, ["variant5-transition"], []);
+        } else if (!component.classList.contains("variant4")) {
+          applyVariants(component, ["variant3"], []);
+        }
+      });
+      component.addEventListener("mouseup", () => {
+        if (component.classList.contains("variant5-transition")) {
+          applyVariants(component, ["variant2"], ["variant5-transition"]);
+        } else if (!component.classList.contains("variant4")) {
+          applyVariants(component, [], ["variant3"]);
+        }
+      });
+      component.addEventListener("click", () => handleClick(component));
+    });
   }
 
   function updateComponentState() {
@@ -66,21 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  clickableComponents.forEach((component) => {
-    component.addEventListener("mouseenter", () => handleMouseEnter(component));
-    component.addEventListener("mouseleave", () => handleMouseLeave(component));
-    component.addEventListener("mousedown", () => {
-      if (!component.classList.contains("variant4")) {
-        applyVariants(component, ["variant3"], []);
-      }
-    });
-    component.addEventListener("mouseup", () => {
-      if (!component.classList.contains("variant4")) {
-        applyVariants(component, [], ["variant3"]);
-      }
-    });
-    component.addEventListener("click", () => handleClick(component));
-  });
+  setupClickEvents();
 
   allPagesClickableComponent.addEventListener("click", () => {
     allPagesSelected = !allPagesSelected;

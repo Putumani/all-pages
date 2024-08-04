@@ -120,6 +120,11 @@ body {
   border: none;
 }
 
+.variant5-transition {
+  border: 3px solid #2469f6;
+  background-color: #2469f6;
+}
+
 .variant5 .checkmark {
   display: flex;
 }
